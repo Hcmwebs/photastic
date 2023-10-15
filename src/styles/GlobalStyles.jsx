@@ -64,12 +64,25 @@ html {
   --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
   /* dark mode setup */
+  --dark-mode-bg-color:#333;
+  --dark-mode-text-color:#f0f0f0;
+  --backgroundColor:var(--grey-50);
+  --textColor:var(--grey-900);
+  --darkModeTransition:color 0.6s ease-in-out,background-Color 0.6s ease-in-out;
+}
+
+.dark-theme {
+	--textColor: var(--dark-mode-text-color);
+	--backgroundColor: var(--dark-mode-bg-color);
 }
 
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
   line-height: 1;
+  background:var(--backgroundColor);
+  color:var(--textColor);
+  transition: var(--darkModeTransition);
 }
 p {
   margin: 0;
