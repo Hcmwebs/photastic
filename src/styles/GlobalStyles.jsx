@@ -107,7 +107,6 @@ h5 {
   font-size: clamp(0.875rem, 1.5vw, 1.5rem); /* Tiny heading */
 }
 main{
-  margin:3rem auto;
   display: grid;
   gap:3rem;
 }
