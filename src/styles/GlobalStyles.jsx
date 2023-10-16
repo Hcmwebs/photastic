@@ -119,10 +119,7 @@ h4 {
 h5 {
   font-size: clamp(0.875rem, 1.5vw, 1.5rem); /* Tiny heading */
 }
-main{
-  display: grid;
-  gap:3rem;
-}
+
 /* BIGGER FONTS */
 /* h1 {
   font-size: clamp(3rem, 6vw, 6rem);
@@ -302,16 +299,15 @@ Toggle Container
 ========
 */
 
-.toggle-container {
-  width: var(--view-width);
-  max-width: var(--max-width);
+.toggleContainer {
+  width:min(var(view-width),var(--max-width));
+  outline:solid 5px white;
   padding: 1rem 0;
-  margin: 0 auto;
   display: flex;
   justify-content: end;
 }
 
-.dark-toggle {
+.toggleBtn {
   background: transparent;
   border-color: transparent;
   width: 5rem;
