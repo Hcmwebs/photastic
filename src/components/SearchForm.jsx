@@ -1,12 +1,27 @@
 import styled from 'styled-components';
+import { useGlobalContext } from '../context/AppContext';
 
 const SearchForm = () => {
+	const { setSearchWord } = useGlobalContext();
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		const searchValue = e.target.elements.search.value;
+		if (!searchValue) return;
+		setSearchWord(searchValue);
+	};
 	return (
 		<Wrapper>
-			<h1>Photastic images</h1>
-			<form action='' className='searchForm'>
-				<input type='text' className='searchInput' />
-				<button className='btn'>search</button>
+			<h1 className='title'>Photastic images</h1>
+			<form className='searchForm' onSubmit={handleSubmit}>
+				<input
+					type='text'
+					className='form-input searchInput'
+					name='search'
+					placeholder='fiji'
+				/>
+				<button type='submit' className='btn'>
+					search
+				</button>
 			</form>
 		</Wrapper>
 	);
