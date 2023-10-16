@@ -294,26 +294,7 @@ PROJECT CSS
 */
 
 /*
-========
-Toggle Container
-========
-*/
 
-.toggleContainer {
-  width:min(var(view-width),var(--max-width));
-  outline:solid 5px white;
-  padding: 1rem 0;
-  display: flex;
-  justify-content: end;
-}
-
-.toggleBtn {
-  
-}
-.toggle-icon {
-  
-}
-/*
 ========
 Search Form
 ========
