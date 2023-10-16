@@ -1,10 +1,12 @@
 import { useQuery } from '@tanstack/react-query';
 import { useGlobalContext } from '../context/AppContext';
 import axios from 'axios';
+import styled from 'styled-components';
 
 const url = `https://api.unsplash.com/search/photos?client_id=${
 	import.meta.env.VITE_API_KEY
 }`;
+console.log(import.meta.env.VITE_API_KEY);
 const Gallery = () => {
 	const { searchWord } = useGlobalContext();
 	const response = useQuery({
@@ -39,15 +41,37 @@ const Gallery = () => {
 	}
 
 	return (
-		<section className='image-container'>
+		<Wrapper className='imageContainer'>
 			{results.map((item) => {
 				const { alt_description, id } = item;
 				const url = item?.urls?.regular;
 
 				return <img key={id} src={url} alt={alt_description} className='img' />;
 			})}
-		</section>
+		</Wrapper>
 	);
 };
+
+const Wrapper = styled.section`
+	&.imageContainer {
+		width: min(var(--view-width), var(--max-width));
+		margin: 3rem auto;
+		display: grid;
+		gap: 2rem;
+		.img {
+			height: 10rem;
+		}
+		@media (min-width: 768px) {
+			&.imageContainer {
+				grid-template-columns: 1fr 1fr;
+			}
+		}
+		@media (min-width: 992px) {
+			&.imageContainer {
+				grid-template-columns: 1fr 1fr 1fr;
+			}
+		}
+	}
+`;
 
 export default Gallery;

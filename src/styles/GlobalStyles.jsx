@@ -287,49 +287,6 @@ ul {
   margin-top: 1rem;
 }
 
-/*
-========
-PROJECT CSS
-========
-*/
-
-/*
-
-========
-Search Form
-========
-*/
-
-/*
-========
-Gallery
-========
-*/
-
-.image-container {
-  width: var(--view-width);
-  max-width: var(--max-width);
-  margin: 3rem auto;
-  display: grid;
-  gap: 2rem;
-}
-
-.image-container .img {
-  height: 10rem;
-}
-
-@media (min-width: 768px) {
-  .image-container {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media (min-width: 992px) {
-  .image-container {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-
 `;
 
 export default GlobalStyles;
