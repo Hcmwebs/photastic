@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
 /* ============= GLOBAL CSS =============== */
@@ -308,17 +308,10 @@ Toggle Container
 }
 
 .toggleBtn {
-  background: transparent;
-  border-color: transparent;
-  width: 5rem;
-  height: 2rem;
-  display: grid;
-  place-items: center;
-  cursor: pointer;
+  
 }
 .toggle-icon {
-  font-size: 1.5rem;
-  color: var(--textColor);
+  
 }
 /*
 ========
@@ -384,6 +377,6 @@ Gallery
 }
 
 
-`
+`;
 
-export default GlobalStyles
+export default GlobalStyles;
