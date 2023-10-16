@@ -1,7 +1,7 @@
 import { useGlobalContext } from '../context/AppContext'
 
 const ThemeToggle = () => {
-	const{isDarkTheme, setSearchWord, toggleTheme} = useGlobalContext()
+	const{isDarkTheme, toggleTheme} = useGlobalContext()
 	return ( 
 	<div className="toggleContainer">
 		<button className="toggleBtn">
