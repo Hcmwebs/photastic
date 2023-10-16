@@ -32,8 +32,7 @@ const Wrapper = styled.section`
 		color: var(--primary-500);
 	}
 	.searchForm {
-		width: var(--view-width);
-		max-width: var(--fixed-width);
+		width: min(var(--view-width), var(--fixed-width));
 		margin: 0 auto;
 		margin-top: 2rem;
 		display: grid;

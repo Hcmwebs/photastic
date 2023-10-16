@@ -4,22 +4,20 @@ import { FaMoon, FaSun } from 'react-icons/fa';
 const ThemeToggle = () => {
 	const { isDarkTheme, toggleTheme } = useGlobalContext();
 	return (
-		<Wrapper>
-			<div className='toggleContainer'>
-				<button className='toggleBtn' onClick={toggleTheme}>
-					{isDarkTheme ? (
-						<FaSun className='toggleIcon' />
-					) : (
-						<FaMoon className='toggleIcon' />
-					)}
-				</button>
-			</div>
+		<Wrapper className='toggleContainer'>
+			<button className='toggleBtn' onClick={toggleTheme}>
+				{isDarkTheme ? (
+					<FaSun className='toggleIcon' />
+				) : (
+					<FaMoon className='toggleIcon' />
+				)}
+			</button>
 		</Wrapper>
 	);
 };
 
 const Wrapper = styled.section`
-	.toggleContainer {
+	&.toggleContainer {
 		width: min(var(view-width), var(--max-width));
 		padding: 1rem 0;
 		display: flex;
